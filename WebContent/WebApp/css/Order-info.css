@@ -1,0 +1,107 @@
+html {
+  font-size: 100px;
+  cursor: default;
+}
+.container {
+  min-width: 12.8rem;
+  padding-bottom: .4rem;
+  margin-top: .4rem;
+}
+.container .center {
+  width: 11.9rem;
+  margin: 0 auto;
+  overflow: hidden;
+  font-size: .12rem;
+  background: #f7f6f5;
+}
+.container .center .left-box {
+  display: inline-block;
+  float: left;
+  width: 6.8rem;
+  padding: .3rem .64rem .2rem .64rem;
+  background-color: #fff;
+  border: 1px solid #e4dfdc;
+}
+.container .center .left-box .info {
+  height: .37rem;
+  line-height: .37rem;
+  color: #612551;
+  border-bottom: 1px dashed #e4dfdc;
+  font-size: .14rem;
+  font-weight: bold;
+}
+.container .center .left-box .getIn {
+  margin-top: .3rem;
+}
+.container .center .left-box .order-info {
+  padding-top: .2rem;
+  padding-left: .1rem;
+}
+.container .center .left-box .order-info p {
+  padding: .05rem 0;
+  color: #333;
+  height: .3rem;
+  line-height: .3rem;
+}
+.container .center .left-box .order-info p .title {
+  display: inline-block;
+  width: .75rem;
+  text-align: right;
+  color: #999;
+}
+.container .center .left-box .order-info p .name {
+  display: inline-block;
+  margin-left: .09rem;
+  font-weight: 500;
+}
+.container .center .left-box .order-info p .name-bold {
+  font-size: .16rem;
+  font-weight: bold;
+}
+.container .center .left-box .order-info p .money-left {
+  color: #f60;
+}
+.container .center .left-box .order-info p .pay {
+  height: .3rem;
+  line-height: .3rem;
+  width: 1.06rem;
+  color: #fff;
+  background: #7f1f59;
+  border: none;
+  border-radius: 5px;
+  padding: 0;
+  font-size: .14rem;
+  margin-left: .05rem;
+}
+.container .center .left-box .order-info p .error {
+  font-size: .14rem;
+  color: red;
+  display: inline-block;
+  margin-left: .05rem;
+}
+.container .center .left-box .order-info p .cancel {
+  background: #fff;
+  border: 1px solid #ece8e6;
+  color: #6d2556;
+}
+.container .center .right-box {
+  display: inline-block;
+  float: right;
+  width: 3.1rem;
+  padding: .35rem .35rem;
+  font-size: .12rem;
+}
+.container .center .right-box .title {
+  font-size: .16rem;
+  color: #666;
+  font-weight: bold;
+}
+.container .center .right-box .detail {
+  padding: .1rem 0 0 .3rem;
+}
+.container .center .right-box .attention {
+  margin-top: .2rem;
+}
+.container .center .right-box .rule {
+  padding: .1rem 0 0;
+}

@@ -1,0 +1,69 @@
+html {
+  font-size: 100px;
+}
+.head {
+  border-top: .04rem solid #971464;
+  background: #f8f4f6;
+  min-width: 12.8rem;
+}
+.head .head-center {
+  width: 11.9rem;
+  height: .94rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.head .logo-box {
+  width: 3rem;
+  height: .54rem;
+  float: left;
+  margin-top: .2rem;
+  margin-left: .25rem;
+}
+.head .logo-box #logo {
+  width: .58rem;
+  height: .54rem;
+  float: left;
+  cursor: pointer;
+}
+.head .logo-box .slogan {
+  height: .4rem;
+  line-height: .4rem;
+  font-size: .2rem;
+  font-weight: bolder;
+  color: #971464;
+  float: left;
+  padding-left: .24rem;
+  margin-left: .37rem;
+  margin-top: .07rem;
+  border-left: .01rem solid #e6e6e6;
+  cursor: pointer;
+}
+.head .user-box {
+  height: .3rem;
+  margin-top: .48rem;
+  margin-right: .04rem;
+}
+.head .user-box ul {
+  font-size: 0;
+  float: right;
+}
+.head .user-box ul li {
+  float: right;
+  height: .14rem;
+  line-height: .14rem;
+  margin-left: .18rem;
+}
+.head .user-box ul li a {
+  font-size: .12rem;
+  color: #000;
+}
+.head .user-box ul li a:hover {
+  color: #7a0b64;
+}
+.head .user-box ul li:nth-child(2) {
+  padding-left: .18rem;
+  border-left: .01rem solid #c8c8c8;
+}
+.head .user-box ul li:nth-child(2) a {
+  color: #6a2a55;
+}

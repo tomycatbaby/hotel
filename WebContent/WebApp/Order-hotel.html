@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Oder-hotel</title>
+	<link rel="shortcut icon" href="images/hotel_logo_backup.png">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/Order-hotel.css">
+	<link rel="stylesheet" href="css/Order-header.css">
+	<link rel="stylesheet" href="css/Order-footer.css">
+</head>
+<body>
+	<div class="bodyer">
+		<div class="bodyer-center">
+			<div class="dir">
+				<li><a href="#">首页</a></li>
+				<li>&gt;</li>
+				<li><a href="#">重庆大头</a></li>
+			</div>
+			<div class="timeset">
+				<form action="">
+					<li>
+						<lab>城市</lab>
+						<input type="text" value="重庆">
+					</li>
+					<li>
+						<lab>入住日期</lab>
+						<input type="date" value="2016-11-14">
+					</li>
+					<li>
+						<lab>退房日期</lab>
+						<input type="date" value="2016-11-15">
+					</li>
+
+					<button type="submit" class="search">搜索</button>
+				</form>
+			</div>
+			<form id="choice_form">
+				
+				<div class="choice choice-first">
+					<span class="choice-name">方向</span>
+					<span class="clean">不限</span>
+					<span class="lab">
+						<input type="checkbox" name="direction" id="south" value="south"><label for="south">朝南</label>
+					</span>
+					<span class="lab">
+						<input type="checkbox" name="direction" id="north" value="north"><label for="north">朝北</label>
+					</span>
+				</div>
+				<div class="choice">
+					<span class="choice-name">人数</span>
+					<span class="clean">不限</span>
+					<span class="lab">
+						<input type="checkbox" name="roomType" id="double" value="double"><label for="double">双人间</label>
+					</span>
+					<span class="lab">
+						<input type="checkbox" name="roomType" id="triple" value="triple"><label for="triple">三人间</label>
+					</span>
+					<span class="lab">
+						<input type="checkbox" name="roomType" id="ultra" value="ultra"><label for="ultra">四人间</label>
+					</span>
+				</div>
+				<div class="choice">
+					<span class="choice-name">状态</span>
+					<span class="clean">不限</span>
+					<span class="lab">
+						<input type="checkbox" name="roomStatus" id="nobody" value="nobody"><label for="nobody">未入住</label>
+					</span>
+					<span class="lab">
+						<input type="checkbox" name="roomStatus" id="somebody" value="somebody"><label for="somebody">已入住</label>
+					</span>
+				</div>
+				<div class="choice">
+					<span class="choice-name">价格</span>
+						<span class="clean">不限</span>
+					<span class="lab">
+						<input type="checkbox" name="price" id="level150" value="level1"><label for="level150">￥150以下</label>
+					</span>
+					<span class="lab">
+						<input type="checkbox" name="price" id="level300" value="level2"><label for="level300">￥150-￥300</label>
+					</span>
+					<span class="lab">
+						<input type="checkbox" name="price" id="level500" value="level3"><label for="level500">￥300-￥500</label>
+					</span>
+					<span class="lab">
+						<input type="checkbox" name="price" id="level500_up" value="level4"><label for="level500_up">￥500以上</label>
+					</span>
+				</div>
+			
+			</form>
+				<div class="container">
+					<div class="leftBox">
+						<div class="result">
+							<p>当前条件,为你找到合适的房间有<span id="result_num">0</span>家</p>
+						</div>
+						<div class="sort">
+							<li id="default_sort" class="active">默认排序</li>
+							<li id="price_low_hight">价格低到高</li>
+							<li id="score_low_height">评分低到高</li>
+						</div>
+						<div class="hotel-list">
+							
+	
+						</div>
+					</div>
+					<div class="rightBox" id="rightBox" style="position: fixed;"></div>
+				</div>
+		</div>
+	</div>
+</body>
+
+<script src="js/main/require.js" data-main="js/main/mainOrderHotel"></script>
+<script charset="utf-8" src="http://map.qq.com/api/js?v=2.exp&key=YOUR_KEY"></script>
+<script>
+	var center = new qq.maps.LatLng(29.5320341434, 106.6054431519);
+    var map = new qq.maps.Map(document.getElementById("rightBox"), {
+       // 地图的中心地理坐标。
+       center: center,
+       zoom:15
+    });
+    
+    var marker = new qq.maps.Marker({
+       position: center,
+       map: map
+    });
+</script>
+</html>

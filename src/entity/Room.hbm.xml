@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-5-31 8:15:18 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="entity.Room" table="room">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+          <property name="roomId" type="java.lang.String">
+            <column name="ROOMID" />
+        </property>
+        <property name="roomType" type="java.lang.String">
+            <column name="ROOMTYPE" />
+        </property>
+        <property name="direction" type="java.lang.String">
+            <column name="DIRECTION" />
+        </property>
+          <property name="limitLive" type="int">
+            <column name="LIMITLIVE" />
+        </property>
+          <property name="spareLive" type="int">
+            <column name="SPARELIVE" />
+        </property>
+          <property name="price" type="int">
+            <column name="PRICE" />
+        </property>
+        <property name="comment" type="int">
+            <column name="COMMENT" />
+        </property>
+        <property name="grade" type="float">
+            <column name="GRADE" />
+        </property>
+         <property name="sex" type="java.lang.String">
+            <column name="SEX" />
+        </property>
+    </class>
+</hibernate-mapping>

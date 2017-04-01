@@ -1,0 +1,272 @@
+html {
+  font-size: 100px;
+  cursor: default;
+}
+.bodyer {
+  min-width: 12rem;
+}
+.bodyer .bodyer-center {
+  width: 11.9rem;
+  margin: 0 auto;
+  position: relative;
+}
+.bodyer .bodyer-center .dir {
+  overflow: hidden;
+  padding: .2rem 0 .1rem 0;
+  height: .2rem;
+  line-height: .2rem;
+  color: #666;
+}
+.bodyer .bodyer-center .dir li {
+  float: left;
+  margin-right: .15rem;
+  font-size: .12rem;
+}
+.bodyer .bodyer-center .dir li a {
+  color: #666;
+  font-size: .12rem;
+}
+.bodyer .bodyer-center .dir a:hover {
+  color: #7a0b64;
+}
+.bodyer .bodyer-center .dir li:last-child a:hover {
+  color: #666;
+  cursor: text;
+}
+.bodyer .bodyer-center .timeset {
+  padding: .1rem 0;
+  font-size: .14rem;
+  background: #f7f6f5;
+  height: .32rem;
+  line-height: .32rem;
+  position: absolute;
+}
+.bodyer .bodyer-center .timeset input {
+  border: 1px solid #eeeae9;
+  border-radius: 3px;
+  width: 1.3rem;
+  height: .3rem;
+  padding: 0 .2rem;
+}
+.bodyer .bodyer-center .timeset form {
+  display: inline-block;
+  padding: 0 1.26rem;
+}
+.bodyer .bodyer-center .timeset li {
+  float: left;
+  margin: 0 .15rem;
+}
+.bodyer .bodyer-center .timeset .search {
+  width: 1.5rem;
+  height: .32rem;
+  background-color: #7f1f59;
+  color: #fff;
+  padding: 0;
+  line-height: .32rem;
+  border: none;
+  border-radius: 3px;
+  margin: 0 .15rem;
+}
+.bodyer .bodyer-center .timeset .search:hover {
+  background-color: #641e4c;
+}
+.bodyer .bodyer-center .choice {
+  height: .34rem;
+  line-height: .34rem;
+  font-size: .12rem;
+  border-bottom: 1px dotted #eeeae9;
+  margin-top: .1rem;
+}
+.bodyer .bodyer-center .choice .choice-name {
+  font-size: .14rem;
+  display: inline-block;
+  float: left;
+  padding: 0 .3rem;
+}
+.bodyer .bodyer-center .choice .clean {
+  float: left;
+  color: #999;
+  padding: 0 .1rem;
+  cursor: pointer;
+}
+.bodyer .bodyer-center .choice .lab {
+  width: 1rem;
+  float: left;
+  display: inline-block;
+  padding: 0 .15rem 0 .15rem;
+}
+.bodyer .bodyer-center .choice .lab input {
+  cursor: pointer;
+}
+.bodyer .bodyer-center .choice .lab label {
+  padding-left: .05rem;
+  cursor: pointer;
+}
+.bodyer .bodyer-center .choice-first {
+  margin-top: .62rem;
+}
+.bodyer .bodyer-center .container {
+  overflow: hidden;
+  min-height: 5.5rem;
+}
+.bodyer .bodyer-center .leftBox {
+  width: 8.7rem;
+  position: relative;
+  float: left;
+}
+.bodyer .bodyer-center .leftBox .result {
+  font-size: .12rem;
+  padding: .15rem 0;
+  color: #666;
+}
+.bodyer .bodyer-center .leftBox .result #result_num {
+  display: inline-block;
+  padding: 0 .05rem;
+  color: #7f1f59;
+}
+.bodyer .bodyer-center .leftBox .sort {
+  width: 8.7rem;
+  height: .34rem;
+  border: 1px solid #eeeae9;
+  line-height: .34rem;
+  font-size: .12rem;
+  padding: 0 .2rem;
+  position: absolute;
+  box-sizing: border-box;
+}
+.bodyer .bodyer-center .leftBox .sort li {
+  float: left;
+  margin: 0 .2rem;
+  cursor: pointer;
+}
+.bodyer .bodyer-center .leftBox .sort .active {
+  color: #7f1f59;
+}
+.bodyer .bodyer-center .leftBox .hotel-list {
+  margin-top: .36rem;
+  padding: .25rem 0;
+}
+.bodyer .bodyer-center .leftBox .hotel-list .hover {
+  -webkit-box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.bodyer .bodyer-center .leftBox .hotel-list .hotel {
+  border: 1px solid #eeeae9;
+  height: 1.8rem;
+  position: relative;
+  margin-bottom: .1rem;
+  cursor: pointer;
+}
+.bodyer .bodyer-center .leftBox .hotel-list .hotel .hotelBox {
+  height: 1.3rem;
+  position: relative;
+  padding: .3rem 1.9rem .2rem 2.24rem;
+}
+.bodyer .bodyer-center .leftBox .hotel-list .hotel .hotelBox .info {
+  position: relative;
+  height: inherit;
+  padding-right: .1rem;
+  border-right: 1px dashed #eeeae9;
+}
+.bodyer .bodyer-center .leftBox .hotel-list .hotel .hotelBox .title {
+  padding-bottom: .09rem;
+  font-size: .2rem;
+  color: #7f1f59;
+}
+.bodyer .bodyer-center .leftBox .hotel-list .hotel .hotelBox .address {
+  font-size: .14rem;
+}
+.bodyer .bodyer-center .leftBox .hotel-list .hotel .hotelBox .saying {
+  margin-top: .2rem;
+  font-size: .14rem;
+}
+.bodyer .bodyer-center .leftBox .hotel-list .hotel .hotelBox .saying .saying-title {
+  color: #ac1a63;
+}
+.bodyer .bodyer-center .leftBox .hotel-list .hotel .hotelBox .saying .content {
+  display: inline-block;
+  line-height: .26rem;
+  border-radius: 13px;
+  background-color: #f7f6f5;
+  padding: 0 .1rem;
+  margin-left: .1rem;
+  color: #7f1f59;
+}
+.bodyer .bodyer-center .leftBox .hotel-list .hotel .hotelBox .provide {
+  position: absolute;
+  bottom: 0;
+}
+.bodyer .bodyer-center .leftBox .hotel-list .hotel .hotelBox .provide .wifi {
+  float: left;
+  margin-right: .05rem;
+}
+.bodyer .bodyer-center .leftBox .hotel-list .hotel .pic {
+  position: absolute;
+  width: 1.8rem;
+  height: 1.4rem;
+  overflow: hidden;
+  border-radius: 3px;
+  top: .2rem;
+  left: .2rem;
+}
+.bodyer .bodyer-center .leftBox .hotel-list .hotel .pic img {
+  width: inherit;
+  height: inherit;
+}
+.bodyer .bodyer-center .leftBox .hotel-list .hotel .area {
+  position: absolute;
+  width: 1.52rem;
+  top: .15rem;
+  right: .3rem;
+  font-size: .12rem;
+  text-align: right;
+  color: #7f1f59;
+}
+.bodyer .bodyer-center .leftBox .hotel-list .hotel .area .price {
+  color: #f60;
+}
+.bodyer .bodyer-center .leftBox .hotel-list .hotel .area .price #price {
+  font-size: .32rem;
+}
+.bodyer .bodyer-center .leftBox .hotel-list .hotel .area .score {
+  padding: .05rem 0;
+  color: grey;
+}
+.bodyer .bodyer-center .leftBox .hotel-list .hotel .area .score #score {
+  color: #7f1f59;
+}
+.bodyer .bodyer-center .leftBox .hotel-list .hotel .area .comment {
+  padding: .05rem 0;
+}
+.bodyer .bodyer-center .leftBox .hotel-list .hotel .area .count {
+  padding: .05rem 0;
+  color: grey;
+}
+.bodyer .bodyer-center .leftBox .hotel-list .hotel .area .count .spare {
+  color: #7f1f59;
+  margin-left: .05rem;
+}
+.bodyer .bodyer-center .leftBox .hotel-list .hotel .area .detail {
+  width: .72rem;
+  height: .24rem;
+  border: 1px solid #C6A7BB;
+  color: #7f1f59;
+  background-color: #fff;
+  border-radius: 3px;
+  margin-top: .07rem;
+  padding: 0;
+}
+.bodyer .bodyer-center .leftBox .hotel-list .hotel .area .detail-hover {
+  background-color: #641e4c;
+  color: #fff;
+}
+.bodyer .bodyer-center .leftBox .hotel-list .hotel-hover {
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.bodyer .bodyer-center .rightBox {
+  float: right;
+  height: 4rem;
+  width: 3rem;
+  margin-top: .47rem;
+}

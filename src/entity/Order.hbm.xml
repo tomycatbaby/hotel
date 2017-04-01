@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-11-7 23:32:16 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="entity.Order" table="user_order">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+        <property name="orderId" type="java.lang.String">
+            <column name="ORDERID" />
+        </property>
+        <property name="name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+        <property name="roomId" type="java.lang.String">
+            <column name="ROOMID" />
+        </property>
+        <property name="totalMoney" type="int">
+            <column name="TOTALMONEY" />
+        </property>
+        <property name="start_day" type="java.util.Date">
+            <column name="START_DAY" />
+        </property>
+        <property name="final_day" type="java.util.Date">
+            <column name="FINAL_DAY" />
+        </property>
+        <property name="order_Status" type="java.lang.String">
+            <column name="ORDER_STATUS" />
+        </property>
+        <property name="book_day" type="java.util.Date">
+        	<column name="BOOK_DAY" />
+        </property>
+         <property name="sex" type="java.lang.String">
+            <column name="SEX" />
+        </property>
+    </class>
+</hibernate-mapping>

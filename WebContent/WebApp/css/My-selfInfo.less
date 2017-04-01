@@ -1,0 +1,141 @@
+.main-body{
+	margin-bottom: 1rem;
+}
+.left-pannel{
+	li:nth-child(4){
+		a{
+			color: #7a0b64;
+			font-weight: bold;
+		}
+	}
+}
+.right-pannel{
+	float: left;
+	overflow: hidden;
+	display: inline-block;
+	width: 10.18rem;
+	.title{
+		font-size: .16rem;
+		color: #333;
+		border-bottom: 1px solid #ece8e6;
+		line-height: .16rem;
+		padding-top: .2rem;
+		padding-bottom: .12rem;
+		font-weight: bold;
+		.attention{
+			color: red;
+		}
+	}
+	.main-info{
+		padding-top: .1rem;
+		.imgline{
+			height: 1.4rem;
+			margin-bottom: .15rem;
+			font-size: .14rem;
+			.lab{
+				width: 1.2rem;
+				height: 1.4rem;
+				float: left;
+				line-height: 1.4rem;
+				text-align: right;
+				color: #666;
+				margin-right: .1rem;
+			}
+			.photo{
+				float: left;
+				width: 1.1rem;
+				height: 1.1rem;
+				border: .01rem solid #eee;
+				text-align: center;
+				background: #fff;
+				border-radius: 50%;
+				position: relative;
+				overflow:hidden;
+				margin-top: .14rem;
+				a{
+					display: inline-block;
+					width: inherit;
+					height: inherit;
+				}
+				img{
+					width: .98rem;
+					height: .98rem;
+					margin-top: .07rem;
+				}
+				p{
+					position: absolute;
+					z-index: 99;
+					width: 1.12rem;
+					height: .35rem;
+					line-height: .35rem;
+					background: #000;
+					bottom:0;
+					left: 0;
+					color: #fff;
+					opacity: .3;
+				}
+			}
+		}
+		.line{
+			line-height: .38rem;
+			font-size: .14rem;
+			margin-bottom: .15rem;
+			color: #333;
+			.lab{
+				width: 1.2rem;
+				line-height: .38rem;
+				display: inline-block;
+				text-align: right;
+				margin-right: .1rem;
+				color: #666;
+				.attention{
+					color: red;
+					font-size: .16rem;
+					display: inline-block;
+					padding-right:.02rem;
+				}
+			}
+			select{
+				height: .38rem;
+				border: .01rem solid #ece8e6;
+				border-radius:.03rem;
+				color: #000;
+				padding: 8px 0 8px 10px;
+				outline: none;
+			}
+			input{
+				outline: none;
+				height: .36rem;
+				background: #fff;
+				border: .01rem solid #ece8e6;
+				border-radius:.05rem;
+				color: #000;
+				padding-left: .1rem;
+			}
+			#username{
+				width: 2.9rem;
+			}
+			#choose_sex{
+				width: .8rem;
+			}
+			#choose_id{
+				width: 3.02rem;
+			}
+			#id_number,#phone_number{
+				width: 2.9rem;
+			}
+			.save{
+				width: 3.05rem;
+				height: .4rem;
+				border: none;
+				background: #7f1f59;
+				font-size: .16rem;
+				color: #fff;
+				border-radius: .05rem;
+			}
+			.save:hover{
+				background: #651c4d;
+			}
+		}
+	}
+}

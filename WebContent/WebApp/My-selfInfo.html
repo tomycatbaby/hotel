@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My-selfInfo</title>
+	<link rel="shortcut icon" href="/Hotel/WebApp/images/hotel_logo_backup.png">
+	<link rel="stylesheet" href="/Hotel/WebApp/css/normalize.css">
+	<link rel="stylesheet" href="/Hotel/WebApp/css/My-header.css">
+	<link rel="stylesheet" href="/Hotel/WebApp/css/My-leftPannel.css">
+	<link rel="stylesheet" href="/Hotel/WebApp/css/My-selfInfo.css">
+</head>
+<body>
+	<div class="inner">
+		<div class="inner-center">
+		<div class="dir">
+			<ul>
+				<li><a href="/Hotel/WebApp/Main-page.html">首页</a></li>
+				<li>&gt;</li>
+				<li><a href="/Hotel/WebApp/My-hotel.html">我的大头青旅</a></li>
+			</ul>
+		</div>
+		<div class="main-body">
+			<div class="left-pannel">
+				<ul>
+					<li><a href="/Hotel/WebApp/My-hotel.html">我的大头青旅</a></li>
+					<li><a href="/Hotel/WebApp/My-page.html">订单中心</a></li>
+					<li><a href="#">我的钱包</a></li>
+					<li><a href="/Hotel/WebApp/My-selfInfo.html">个人中心</a></li>
+					<li><a href="#">常用信息</a></li>
+				</ul>
+			</div>
+			<div class="right-pannel">
+				<h2 class="title">基本信息 <span class="attention">(*为关键信息，仅允许填写一次)</span>	</h2>
+				<div class="main-info">
+					<div class="imgline">
+						<div class="lab">上传头像：</div>
+						<div class="photo">
+							<form enctype="multipart/form-data" method="POST" action="fileupload.action" id="img_file">
+								<input type="file" hidden id="img_up" name="uploadFile" >
+							</form>
+							<a href="#" class="img-up">
+								<img src="images/nophoto.png" id="nophoto">
+								<p>修改头像</p>
+							</a>
+						</div>
+					</div>
+					<form id="saveUser">
+						<div class="line">
+							<span class="lab"><span class="attention">*</span>姓名：</span>
+							<input type="text" class="username" id="username" name="name">
+						</div>
+						<div class="line">
+							<span class="lab"><span class="attention">*</span>性别：</span>
+							<select id="choose_sex" name="sex">
+								<option value="男">男</option>
+								<option value="女">女</option>
+							</select>
+						</div>
+						<div class="line">
+							<span class="lab"><span class="attention">*</span>证件类型：</span>
+							<select id="choose_id" >
+								<option value="居民身份证">居民身份证</option>
+								<option value="往来港澳通行证">往来港澳通行证</option>
+								<option value="学生证">学生证</option>
+							</select>
+						</div>
+						<div class="line">
+							<span class="lab"><span class="attention">*</span>证件号码：</span>
+							<input type="text" id="id_number" placeholder="请填写证件号码" name="idCard">
+						</div>
+						<div class="line">
+							<span class="lab">联系方式：</span>
+							<input type="text" id="phone_number" placeholder="请填写联系方式" name="cellphone">
+						</div>
+						<div class="line">
+							<span class="lab"></span>
+							<button type="submit" class="save">保存</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+<script src="/Hotel/WebApp/js/main/require.js" data-main="/Hotel/WebApp/js/main/mainMyselfInfo"></script>
+</html>

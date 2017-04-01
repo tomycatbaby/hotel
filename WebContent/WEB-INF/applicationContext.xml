@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+
+		<property name="driverClassName">
+			<value>com.mysql.jdbc.Driver</value>
+		</property>
+
+		<property name="url">
+			<!-- <value>jdbc:mysql://114.215.159.54:3306/hotel</value> -->
+			<value>jdbc:mysql://127.0.0.1:3306/hotel</value>
+		
+		</property>
+
+		<property name="username">
+			<value>root</value>
+		</property>
+
+		<property name="password">
+			<value>123456</value>
+		</property>
+
+	</bean>
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+
+		<property name="dataSource">
+			<ref local="dataSource" />
+		</property>
+
+
+		<property name="mappingResources">
+			<list>
+
+				<value>entity/User.hbm.xml</value>
+				<value>entity/Order.hbm.xml</value>
+				<value>entity/Room.hbm.xml</value>
+				<value>entity/Bed.hbm.xml</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+
+
+	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+
+	<!-- userDao -->
+	<bean id="userDao" class="daoImpl.UserDaoImpl" scope="singleton">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="userService" class="serviceImpl.UserServiceImpl">
+		<property name="userDao" ref="userDao"></property>
+	</bean>
+	<!-- orderDao -->
+	<bean id="orderDao" class="daoImpl.OrderDaoImpl" scope="singleton">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="orderService" class="serviceImpl.OrderServiceImpl">
+		<property name="orderDao" ref="orderDao"></property>
+	</bean>
+	<!-- roomDao -->
+		<bean id="roomDao" class="daoImpl.RoomDaoImpl" scope="singleton">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="roomService" class="serviceImpl.RoomServiceImpl">
+		<property name="roomDao" ref="roomDao"></property>
+	</bean>
+	<!-- bedDao -->
+		<bean id="bedDao" class="daoImpl.BedDaoImpl" scope="singleton">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="bedService" class="serviceImpl.BedServiceImpl">
+		<property name="bedDao" ref="bedDao"></property>
+	</bean>
+	
+	<!-- userAction -->
+	<bean id="userAction" class="action.user.UserAction" scope="prototype">
+		<property name="userService" ref="userService"></property>
+	</bean>
+	<bean id="userRegisterAction" class="action.user.UserRegisterAction"
+		scope="prototype">
+		<property name="userService" ref="userService"></property>
+	</bean>
+	<bean id="userCheckAction" class="action.user.CheckAction" scope="prototype">
+		<property name="userService" ref="userService"></property>
+	</bean>
+	<bean id="imageUploadAction" class="action.user.ImageUploadAction" scope="prototype">
+		<property name="userService" ref="userService"></property>
+	</bean>
+	<bean id="loginOutAction" class="action.user.LoginOutAction" scope="prototype">
+		<property name="userService" ref="userService"></property>
+	</bean>
+	<bean id="refreshAction" class="action.user.RefreshAction" scope="prototype">
+		<property name="userService" ref="userService"></property>
+	</bean>
+	<bean id="saveAction" class="action.user.UserSave" scope="prototype">
+		<property name="userService" ref="userService"></property>
+	</bean>
+	
+	<!-- orderAction -->
+	<bean id="orderAction" class="action.order.OrderAction" scope="prototype">
+		<property name="orderService" ref="orderService"></property>
+	</bean>
+	<bean id="saveOrderAction" class="action.order.SaveOrderAction" scope="prototype">
+		<property name="orderService" ref="orderService"></property>
+		<property name="roomService" ref="roomService"></property>
+		<property name="bedService" ref="bedService"></property>
+	</bean>
+	<!-- roomAction -->
+	<bean id="roomAction" class="action.room.RoomChoose" scope="prototype">
+		<property name="roomService" ref="roomService"></property>
+	</bean>
+	<!-- bedAction -->
+
+</beans>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Order-info</title>
+	<link rel="shortcut icon" href="images/hotel_logo_backup.png">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/Order-info.css">
+	<link rel="stylesheet" href="css/Order-header.css">
+	<link rel="stylesheet" href="css/Order-footer.css">
+</head>
+<body>
+	<div class="container">
+		<div class="center">
+			<div class="left-box">
+				<p class="info">订单信息</p>
+				<div class="order-info">
+					<p>
+						<span class="title">房间名称:</span>
+						<span class="name name-bold">402</span>
+					</p>
+					<p>
+						<span class="title">电话:</span>
+						<span class="name">12344567</span>
+					</p>
+					<p>
+						<span class="title">订单编号:</span>
+						<span class="name">R20033550000009586</span>
+					</p>
+					<p>
+						<span class="title">订单状态:</span>
+						<span class="name">预定中</span>
+					</p>
+					<p>
+						<span class="title">订单总价:</span>
+						<span class="name" >¥500</span>
+					</p>
+					<p>
+						<span class="title">还需支付:</span>
+						<span class="name money-left" id="money_left">¥500</span>
+					</p>
+					<p>
+						<span class="title">您现在可以</span>
+						<button class="pay" id="pay">全额支付</button>
+					</p>
+				</div>
+				<p class="info getIn">入住信息</p>
+				<div class="order-info">
+					<p>
+						<span class="title">房型:</span>
+						<span class="name">双人间</span>
+					</p>
+					<p>
+						<span class="title">入住人:</span>
+						<span class="name">石印</span>
+					</p>
+					<p>
+						<span class="title">入离时间:</span>
+						<span class="name">2016-11-07(星期一)； 离店 2016-11-08(星期二)；共 1 晚</span>
+					</p>
+					<p>
+						<span class="title">手机电话:</span>
+						<span class="name">234567890</span>
+					</p>
+
+					<p>
+						<span class="title">您现在可以</span>
+						<button class="pay cancel" id="pay_cancel">取消订单</button>
+					</p>
+				</div>
+			</div>
+			<div class="right-box">
+				<p class="title">您当前会员权益</p>
+				<p class="detail">本次本人本卡成功入住后，可获得相应积分</p>
+				<p class="detail">最晚到店时间为入住日晚上19:00</p>
+				<p class="detail">退房时间延长离店日12:00</p>
+				<p class="title attention">温馨提示</p>
+				<p class="rule">1.酒店通常在12：00后开始办理入住，早到可能需要等待</p>
+				<p class="rule">2.促销活动以活动规则为准。</p>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="js/main/require.js" data-main="js/main/mainOrderInfo"></script>
+</html>

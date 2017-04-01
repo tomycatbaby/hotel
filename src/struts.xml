@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+
+	<package name="hotel" extends="struts-default,json-default"
+		namespace="/">
+		<action name="login" class="action.user.UserAction" method="login">
+			<interceptor-ref name="json">
+				<param name="contentType">json</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack" />
+		</action>
+
+		<action name="register" class="action.user.UserRegisterAction"
+			method="register">
+			<interceptor-ref name="json">
+				<param name="contentType">json</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack" />
+		</action>
+		<action name="check" class="action.user.CheckAction" method="check">
+			<interceptor-ref name="json">
+				<param name="contentType">json</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack" />
+		</action>
+		<action name="chooseRoom" class="action.room.RoomChoose">
+			<interceptor-ref name="json">
+				<param name="contentType">json</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack" />
+			<result name="success"></result>
+		</action>
+		<action name="sortByPrice" class="action.room.SortByPriceAction">
+			<interceptor-ref name="json">
+				<param name="contentType">json</param>
+			</interceptor-ref>
+			
+		</action>
+			<action name="sortByGrade" class="action.room.SortByGradeAction">
+			<interceptor-ref name="json">
+				<param name="contentType">json</param>
+			</interceptor-ref>
+			
+		</action>
+	</package>
+	<!-- 用户登录才能访问 -->
+	<package name="user" extends="struts-default,json-default"
+		namespace="/">
+		<interceptors>
+			<interceptor name="user" class="interceptor.LoginInterceptor"></interceptor>
+			<interceptor-stack name="mydefaultStack">
+				<interceptor-ref name="json">
+					<param name="contentType">json</param>
+				</interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+				<interceptor-ref name="user"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="mydefaultStack"></default-interceptor-ref>
+		<global-results>
+			<result name="login"></result>
+		</global-results>
+		<action name="saveUser" class="action.user.UserSave">
+			<result name="success"></result>
+			<result name="input"></result>
+		</action>
+		<action name="getUser" class="action.user.UserCenter">
+			<result name="success"></result>
+			<result name="input"></result>
+		</action>
+		<action name="refresh" class="action.user.RefreshAction"
+			method="refresh">
+		</action>
+		<action name="loginOut" class="action.user.LoginOutAction"
+			method="loginOut">
+		</action>
+		<action name="saveOrder" class="action.order.SaveOrderAction">
+		<result name="success"></result>
+		</action>
+		<action name="getOrder" class="action.order.OrderAction"
+			method="getOrder">
+		</action>
+		<action name="fileupload" class="action.user.ImageUploadAction">
+			<result name="success"></result>
+			<result name="input"></result>
+			<!-- 拦截器设置上传文件大小类型 -->
+			<interceptor-ref name="defaultStack">
+				<!--文件大小 -->
+				<param name="fileUpload.maximumSize">1000000000</param>
+				<!--文件类型 -->
+				<param name="fileUpload.allowedTypesSet">image/jpg,image/jpeg,image/png</param>
+			</interceptor-ref>
+		</action>
+		
+	</package>
+
+
+
+
+</struts>

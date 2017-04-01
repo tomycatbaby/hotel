@@ -1,0 +1,238 @@
+html{font-size: 100px}
+.hidden::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: rgba(0, 0, 0, .5);
+}
+.hidden{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    visibility: hidden;
+    .box{
+        width: 3.9rem;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+        margin: auto;
+        overflow: hidden;
+        transform: scale(0);
+        transition: .5s transform;
+    }
+    .box-login-active{
+        height: 3.1rem;
+        transform: scale(1);
+    }
+    .box-register-active{
+        height: 3.7rem;
+        transform: scale(1);
+    }
+    .box-head{
+        width: 3.5rem;
+        height: .6rem;
+        padding: 0 .2rem;
+        background: linear-gradient(to bottom,#a51863 10%,#f6f2f4 0);
+        position: relative;
+        img{
+            width: .3rem;
+            height: .3rem;
+            float: left;
+            margin-top: .18rem;
+        }
+        span{
+            display: inline-block;
+            font-size: .16rem;
+            font-weight: bold;
+            color: #7f1f59;
+            float: left;
+            margin-top: .24rem;
+            margin-left: .1rem;
+        }
+        .box-hotel-login{
+            position: absolute;
+            color: #000;
+            left: 50%;
+            margin-left: -.16rem;
+            margin-top: .21rem;
+            font-size: .2rem;
+            cursor: pointer;
+        }
+        .box-hotel-register{
+            float: right;
+            margin-right: .3rem;
+            color: #7f1f59;
+            cursor: pointer;
+        }
+        .box-hotel-login a:hover,.box-hotel-register a:hover{
+            color: #000;
+        }
+        .close{
+            float: right;
+            width: .35rem;
+            height: .35rem;
+            margin-top: .155rem;
+            cursor: pointer;
+        }
+    }
+    .login-box{
+        position: absolute;
+        left: 50%;
+        margin-left: -1.57rem;
+        display: none;
+    }
+    .register-box{
+        position: absolute;
+        left: 50%;
+        margin-left: -1.57rem;
+
+    }
+    .box-input{
+        width: 3.2rem;
+        margin: .1rem 0 0;
+        overflow: hidden;
+        .input-area{
+            width: 100%;
+            height: .42rem;
+            margin-top: .17rem;
+            border: 1px solid #bebebe;
+            box-sizing: border-box;
+            position: relative;
+            .pic{
+                width: .4rem;
+                height: .4rem;
+                float: left;
+            }
+            .phone-img{
+                background: url('../images/phone.png') center no-repeat/ .1rem .18rem,
+                #f9f9f9	0 0/.4rem;
+
+            }
+            .keyword-img{
+                background: url('../images/keyword.png') center no-repeat/ .16rem,
+                #f9f9f9	0 0/.4rem;
+            }
+            .word{
+                float: left;
+                border: none;
+                border-left:1px solid #bebebe;
+                width: 2.41rem;
+                height: .4rem;
+                padding: 0 .15rem;
+                font-size: .12rem;
+            }
+        }
+    }
+    .box-up{
+        width: 3.2rem;
+        height: .46rem;
+        margin: 0 auto;
+        background: #a51863;
+        font-size: .22rem;
+        color: #f6f2f4;
+        text-align: center;
+        line-height: .46rem;
+        margin-top: .38rem;
+        cursor: pointer;
+    }
+    .error{
+        font-size: .12rem;
+        color: red;
+        position: absolute;
+        right: .05rem;
+        top: .13rem;
+    }
+    .login-success{
+        position: absolute;
+        color: #2ed28a;
+        font-size: .12rem;
+        left: 50%;
+        margin-left: -.3rem;
+        margin-top: .1rem;
+    }
+    .login-error{
+        position: absolute;
+        color: red;
+        font-size: .12rem;
+        left: 50%;
+        margin-left: -.6rem;
+        margin-top: .1rem;
+    }
+}
+.header{
+    min-width: 12rem;
+    height: .6rem;
+    line-height:.6rem;
+    background-color: #f2ebec;
+    .header-center{
+        width: 11.9rem;
+        margin: 0 auto;
+        li{
+            float: left;
+            font-size: .16rem;
+        }
+        li + li{
+            float: right;
+        }
+        .logo-bar{
+            margin-top: .125rem;
+            line-height:.35rem;
+        }
+        .logo{
+            width: .35rem;
+            height: .35rem;
+            float: left;
+
+        }
+        .hotel-name{
+            display: inline-block;
+            font-size: .24rem;
+            font-weight:bold;
+            color: #7f1f59;
+            margin-left:.1rem;
+        }
+        .register,.login,.user,.logout{
+            font-size: .14rem;
+            font-weight: bold;
+            margin: 0 .1rem;
+            a{
+                color: #000;
+            }
+            a:hover{
+                color: #7f1f59;
+            }
+        }
+    }
+}
+.nav{
+    min-width: 12rem;
+    background-color: #760e50;
+    height:.5rem;
+    .nav-container{
+        width: 11.9rem;
+        margin: 0 auto;
+        li{
+            height: .3rem;
+            line-height:.3rem;
+            font-size: .14rem;
+            float: left;
+            margin: .1rem .5rem 0 0;
+            a{
+                color: #fff;
+            }
+        }
+        li:nth-child(2){
+            border-bottom: 2px solid #fff;
+        }
+    }
+}

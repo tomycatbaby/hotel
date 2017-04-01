@@ -1,0 +1,50 @@
+.inner {
+  min-width: 12.8rem;
+}
+.inner .inner-center {
+  width: 11.9rem;
+  margin: 0 auto;
+}
+.dir {
+  overflow: hidden;
+  padding: .2rem 0 .1rem 0;
+  height: .2rem;
+  line-height: .2rem;
+}
+.dir ul {
+  font-size: 0;
+}
+.dir li {
+  float: left;
+  margin-right: .15rem;
+  font-size: .12rem;
+}
+.dir li a {
+  color: #000;
+  font-size: .12rem;
+}
+.dir li a:hover {
+  color: #7a0b64;
+}
+.main-body {
+  overflow: hidden;
+}
+.left-pannel {
+  padding-top: .25rem;
+  width: 1.7rem;
+  float: left;
+  display: inline-block;
+}
+.left-pannel li {
+  margin-top: .35rem;
+}
+.left-pannel li a {
+  font-size: .14rem;
+  color: #333;
+}
+.left-pannel li a:hover {
+  color: #7a0b64;
+}
+.left-pannel li:first-child {
+  margin-top: 0;
+}

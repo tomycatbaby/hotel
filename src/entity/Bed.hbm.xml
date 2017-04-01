@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-5-31 8:15:18 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="entity.Bed" table="bed">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+    	<property name="bedId" type="java.lang.String">
+            <column name="BEDID" />
+        </property>
+          <property name="name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+          <property name="roomId" type="java.lang.String">
+            <column name="ROOMID" />
+        </property>
+          <property name="price" type="int">
+            <column name="PRICE" />
+        </property>
+          <property name="status" type="java.lang.String">
+            <column name="STATUS" />
+        </property>
+          <property name="sex" type="java.lang.String">
+            <column name="SEX" />
+        </property>
+    </class>
+</hibernate-mapping>
